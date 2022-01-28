@@ -1,7 +1,123 @@
-.attribution {
+:root {
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --header-size: 1.375rem;
+  --paragraph-size: 1.125rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  background-color: var(--main-bg);
+  margin: 0;
+}
+
+.nft-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  padding: 24px;
+  margin: 10px;
+}
+
+.nft-image {
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.nft-text {
+  margin-bottom: 8px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.nft-text > h1 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--header-size);
+  margin-bottom: 16px;
+}
+
+.nft-text > p {
+  color: var(--soft-blue);
+  font-size: var(--paragraph-size);
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.nft-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.nft-info div {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nft-info img {
+  padding-right: 5px;
+}
+
+.nft-value {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.nft-time {
+  color: var(--soft-blue);
+}
+
+.nft-creator {
+  display: flex;
+  align-items: center;
+  color: var(--soft-blue);
+}
+
+.nft-creator img {
+  width: 33px;
+  height: 33px;
+  margin-right: 16px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.nft-creator span {
+  color: var(--white);
+}
+
+footer.attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--soft-blue);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+footer.attribution a {
+  color: var(--soft-blue);
 }
