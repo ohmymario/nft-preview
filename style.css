@@ -160,6 +160,11 @@ footer.attribution {
 }
 footer.attribution a {
   color: var(--soft-blue);
+  transition: color 0.35s;
+}
+
+footer.attribution a:hover {
+  color: var(--white);
 }
 
 @media screen and (max-width: 375px) {
