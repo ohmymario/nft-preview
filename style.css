@@ -161,3 +161,25 @@ footer.attribution {
 footer.attribution a {
   color: var(--soft-blue);
 }
+
+@media screen and (max-width: 375px) {
+  .nft-container {
+    width: 327px;
+    padding: 24px;
+  }
+  .nft-img-container {
+    max-width: 278px;
+  }
+
+  .nft-text > h1 {
+    margin-bottom: 12px;
+  }
+
+  .nft-text > p {
+    margin-bottom: 16px;
+  }
+
+  .nft-info {
+    padding-bottom: 16px;
+  }
+}
