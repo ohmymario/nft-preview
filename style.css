@@ -1,7 +1,7 @@
 :root {
   --white: hsl(0, 0%, 100%);
   --soft-blue: hsl(215, 51%, 70%);
-  --cyan: hsl(178, 100%, 50%);
+  --cyan: rgb(0, 255, 247);
   --main-bg: hsl(217, 54%, 11%);
   --card-bg: hsl(216, 50%, 16%);
   --line: hsl(215, 32%, 27%);
@@ -36,17 +36,44 @@ body {
   width: 350px;
   border-radius: 15px;
   background-color: var(--card-bg);
-  padding: 24px;
-  margin: 10px;
+  padding: 24px 24px 32px 24px;
+  margin-bottom: 10px;
 }
 
-.nft-image {
-  border-radius: 8px;
+.nft-img-container {
+  position: relative;
   margin-bottom: 24px;
 }
 
-.nft-text {
-  margin-bottom: 8px;
+.nft-image {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.hover-view {
+  opacity: 0;
+  background-color: rgba(0, 255, 247, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.35s;
+}
+
+.nft-img-container:hover .hover-view {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1,
@@ -59,6 +86,12 @@ p {
   font-weight: 600;
   font-size: var(--header-size);
   margin-bottom: 16px;
+  transition: color 0.35s;
+}
+
+.nft-text > h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
 
 .nft-text > p {
@@ -66,6 +99,7 @@ p {
   font-size: var(--paragraph-size);
   font-weight: 300;
   margin-bottom: 24px;
+  line-height: 26px;
 }
 
 .nft-info {
@@ -111,6 +145,12 @@ p {
 
 .nft-creator span {
   color: var(--white);
+  transition: color 0.35s;
+}
+
+.nft-creator span:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
 
 footer.attribution {
